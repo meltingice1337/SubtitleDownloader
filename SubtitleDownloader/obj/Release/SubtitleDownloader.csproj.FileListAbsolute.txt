@@ -1,0 +1,9 @@
+C:\Users\MeltingICE\Google Drive\Programming\C#\SubtitleDownloader\SubtitleDownloader\bin\Release\SubtitleDownloader.exe.config
+C:\Users\MeltingICE\Google Drive\Programming\C#\SubtitleDownloader\SubtitleDownloader\bin\Release\SubtitleDownloader.exe
+C:\Users\MeltingICE\Google Drive\Programming\C#\SubtitleDownloader\SubtitleDownloader\bin\Release\SubtitleDownloader.pdb
+C:\Users\MeltingICE\Google Drive\Programming\C#\SubtitleDownloader\SubtitleDownloader\obj\Release\SubtitleDownloader.FrmMain.resources
+C:\Users\MeltingICE\Google Drive\Programming\C#\SubtitleDownloader\SubtitleDownloader\obj\Release\SubtitleDownloader.Properties.Resources.resources
+C:\Users\MeltingICE\Google Drive\Programming\C#\SubtitleDownloader\SubtitleDownloader\obj\Release\SubtitleDownloader.csproj.GenerateResource.Cache
+C:\Users\MeltingICE\Google Drive\Programming\C#\SubtitleDownloader\SubtitleDownloader\obj\Release\SubtitleDownloader.exe
+C:\Users\MeltingICE\Google Drive\Programming\C#\SubtitleDownloader\SubtitleDownloader\obj\Release\SubtitleDownloader.pdb
+C:\Users\MeltingICE\Google Drive\Programming\C#\SubtitleDownloader\SubtitleDownloader\obj\Release\SubtitleDownloader.csprojResolveAssemblyReference.cache
