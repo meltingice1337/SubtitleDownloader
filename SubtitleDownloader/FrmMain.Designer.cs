@@ -64,6 +64,7 @@
             this.txtQuery.Name = "txtQuery";
             this.txtQuery.Size = new System.Drawing.Size(246, 20);
             this.txtQuery.TabIndex = 2;
+            this.txtQuery.DragEnter += new System.Windows.Forms.DragEventHandler(this.FrmMain_DragEnter);
             // 
             // lblStatusValue
             // 
@@ -103,6 +104,7 @@
             this.lstSubtitles.TabIndex = 4;
             this.lstSubtitles.UseCompatibleStateImageBehavior = false;
             this.lstSubtitles.View = System.Windows.Forms.View.Details;
+            this.lstSubtitles.DragEnter += new System.Windows.Forms.DragEventHandler(this.FrmMain_DragEnter);
             this.lstSubtitles.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstSubtitles_MouseDoubleClick);
             // 
             // hLanguage
@@ -123,6 +125,7 @@
             // FrmMain
             // 
             this.AcceptButton = this.btnSearch;
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(355, 419);
@@ -141,6 +144,8 @@
             this.Text = "SubtitleDownloader";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.Shown += new System.EventHandler(this.FrmMain_Shown);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.FrmMain_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.FrmMain_DragEnter);
             this.ResumeLayout(false);
             this.PerformLayout();
 

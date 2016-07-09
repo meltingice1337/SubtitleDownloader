@@ -57,12 +57,19 @@ namespace SubtitleDownloader
                 SearchStarted = true;
                 BeginInvoke((MethodInvoker)delegate{  btnSearch.Enabled = false; });
                 var pageContent = Web.GetSearch(query);
-                var subtitles = Addic7edClass.Parse(pageContent);
-                InsertItems(subtitles);
-                if (subtitles.Count > 0)
-                    SetStatus(subtitles.Count.ToString() + " subtitles found.");
+                if (pageContent != null)
+                {
+                    var subtitles = Addic7edClass.Parse(pageContent);
+                    InsertItems(subtitles);
+                    if (subtitles.Count > 0)
+                        SetStatus(subtitles.Count.ToString() + " subtitles found.");
+                    else
+                        SetStatus("No subtitles found");
+                }
                 else
-                    SetStatus("No subtitles found");
+                {
+                    SetStatus("Error.");
+                }
                 SearchStarted = false;
                 BeginInvoke((MethodInvoker)delegate{  btnSearch.Enabled = true; });
             })).Start();
@@ -83,12 +90,14 @@ namespace SubtitleDownloader
 
         private void lstSubtitles_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+
+            var url = (string)lstSubtitles.SelectedItems[0].Tag;
             if (lstSubtitles.SelectedItems.Count == 0 || Downloading) return;
             (new Thread(() =>
             {
                 Downloading = true;
                 SetStatus("Downloading file...");
-                Web.Download((string)lstSubtitles.SelectedItems[0].Tag, Path.Combine(DownloadPath, FileName + ".srt"));
+                Web.Download(url, Path.Combine(DownloadPath, FileName + ".srt"));
                 SetStatus("Done");
                 Downloading = false;
             })).Start();
@@ -134,6 +143,23 @@ namespace SubtitleDownloader
                     FileShellExtension.RemoveContextMenuItem(extension, menuName);
                 }
             }
+        }
+
+        private void FrmMain_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop)) e.Effect = DragDropEffects.Copy;
+        }
+
+        private void FrmMain_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            string query = Path.GetFileNameWithoutExtension(files[0]);
+
+            txtQuery.Text = query;
+            FileName = query;
+            DownloadPath = Path.GetDirectoryName(files[0]);
+
+            Search(query);
         }
     }
 }

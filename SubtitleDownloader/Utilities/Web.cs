@@ -24,10 +24,7 @@ namespace SubtitleDownloader
             }
             catch (WebException ex)
             {
-                var response = (HttpWebResponse)ex.Response;
-                var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
-                Referer = response.ResponseUri.ToString();
-                return responseString;
+                return null;
             }
         }
 
