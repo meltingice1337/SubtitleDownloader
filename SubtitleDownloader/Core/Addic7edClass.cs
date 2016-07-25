@@ -8,7 +8,7 @@ namespace SubtitleDownloader
         public static List<Subtitle> Parse(string pageContent)
         {
             var result = new List<Subtitle>();
-            foreach (var mainMatch in Regex.Matches(pageContent, @"<div id=""container95m"">([\s\S]*?)</div>"))
+            foreach (Match mainMatch in Regex.Matches(pageContent, @"<div id=""container95m"">([\s\S]*?)</div>"))
             {
                 var version = Regex.Match(mainMatch.Value, @"(?<=Version )(.*?)(?=,)").Value;
                 foreach (Match langMatch in Regex.Matches(mainMatch.Value, @"<tr>([\s\S]*?)</tr>"))

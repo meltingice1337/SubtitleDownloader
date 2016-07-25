@@ -17,6 +17,9 @@ namespace SubtitleDownloader
             try
             {
                 var request = (HttpWebRequest)WebRequest.Create(string.Format(SearchLink, q));
+                request.UserAgent = "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0";
+                request.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";
+                request.Headers["Accept-Language"] = "en-US,en;q=0.5";
                 var response = (HttpWebResponse)request.GetResponse();
                 var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
                 Referer = response.ResponseUri.ToString();
