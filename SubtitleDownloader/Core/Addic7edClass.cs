@@ -7,13 +7,13 @@ namespace SubtitleDownloader
     {
         public static List<Subtitle> Parse(string pageContent)
         {
-            List<Subtitle> result = new List<Subtitle>();
-            foreach (Match mainMatch in Regex.Matches(pageContent, @"<div id=""container95m"">([\s\S]*?)</div>"))
+            var result = new List<Subtitle>();
+            foreach (var mainMatch in Regex.Matches(pageContent, @"<div id=""container95m"">([\s\S]*?)</div>"))
             {
-                string version = Regex.Match(mainMatch.Value, @"(?<=Version )(.*?)(?=,)").Value;
+                var version = Regex.Match(mainMatch.Value, @"(?<=Version )(.*?)(?=,)").Value;
                 foreach (Match langMatch in Regex.Matches(mainMatch.Value, @"<tr>([\s\S]*?)</tr>"))
                 {
-                    string language = Regex.Match(langMatch.Value, @"(?<=class=""language"">)(.*?)(?=<)").Value;
+                    var language = Regex.Match(langMatch.Value, @"(?<=class=""language"">)(.*?)(?=<)").Value;
                     if (language != "")
                     {
                         var completed = Regex.Match(langMatch.Value, @"(?<=<td width=""19%""><b>)([\s\S]*?)(?=</b>)").Value;

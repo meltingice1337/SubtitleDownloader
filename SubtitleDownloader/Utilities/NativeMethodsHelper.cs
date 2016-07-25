@@ -8,10 +8,10 @@ namespace SubtitleDownloader
     {
         public static int MakeLong(int wLow, int wHigh)
         {
-            int low = (int)IntLoWord(wLow);
+            var low = (int)IntLoWord(wLow);
             short high = IntLoWord(wHigh);
-            int product = 0x10000 * (int)high;
-            int mkLong = (int)(low | product);
+            var product = 0x10000 * (int)high;
+            var mkLong = (int)(low | product);
             return mkLong;
         }
 
