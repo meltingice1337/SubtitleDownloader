@@ -7,3 +7,12 @@ C:\Users\MeltingICE\Google Drive\Programming\C#\SubtitleDownloader\SubtitleDownl
 C:\Users\MeltingICE\Google Drive\Programming\C#\SubtitleDownloader\SubtitleDownloader\obj\Release\SubtitleDownloader.exe
 C:\Users\MeltingICE\Google Drive\Programming\C#\SubtitleDownloader\SubtitleDownloader\obj\Release\SubtitleDownloader.pdb
 C:\Users\MeltingICE\Google Drive\Programming\C#\SubtitleDownloader\SubtitleDownloader\obj\Release\SubtitleDownloader.csprojResolveAssemblyReference.cache
+C:\Users\meltingice\Documents\GitHub\SubtitleDownloader\SubtitleDownloader\bin\Release\SubtitleDownloader.exe.config
+C:\Users\meltingice\Documents\GitHub\SubtitleDownloader\SubtitleDownloader\bin\Release\SubtitleDownloader.exe
+C:\Users\meltingice\Documents\GitHub\SubtitleDownloader\SubtitleDownloader\bin\Release\SubtitleDownloader.pdb
+C:\Users\meltingice\Documents\GitHub\SubtitleDownloader\SubtitleDownloader\obj\Release\SubtitleDownloader.FrmMain.resources
+C:\Users\meltingice\Documents\GitHub\SubtitleDownloader\SubtitleDownloader\obj\Release\SubtitleDownloader.Properties.Resources.resources
+C:\Users\meltingice\Documents\GitHub\SubtitleDownloader\SubtitleDownloader\obj\Release\SubtitleDownloader.csproj.GenerateResource.Cache
+C:\Users\meltingice\Documents\GitHub\SubtitleDownloader\SubtitleDownloader\obj\Release\SubtitleDownloader.exe
+C:\Users\meltingice\Documents\GitHub\SubtitleDownloader\SubtitleDownloader\obj\Release\SubtitleDownloader.pdb
+C:\Users\meltingice\Documents\GitHub\SubtitleDownloader\SubtitleDownloader\obj\Release\SubtitleDownloader.csprojResolveAssemblyReference.cache
