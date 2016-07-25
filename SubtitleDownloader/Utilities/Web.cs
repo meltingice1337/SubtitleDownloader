@@ -9,14 +9,14 @@ namespace SubtitleDownloader
 
     class Web
     {
-        private const string SearchLink = "http://www.addic7ed.com/search.php?search={0}";
+        private const string SearchLink = "http://www.addic7ed.com/search.php?search={0}&anti_cache={1}";
         private static string Referer;
 
         public static string GetSearch(string q)
         {
             try
             {
-                var request = (HttpWebRequest)WebRequest.Create(string.Format(SearchLink, q));
+                var request = (HttpWebRequest)WebRequest.Create(string.Format(SearchLink, q, DateTime.Now.ToString()));
                 request.UserAgent = "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0";
                 request.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";
                 request.Headers["Accept-Language"] = "en-US,en;q=0.5";
