@@ -47,6 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Addic7edClass.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\FileShellExtension.cs" />
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -57,6 +62,7 @@
     <Compile Include="Controls\ListViewEx.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Utilities\Helper.cs" />
     <Compile Include="Utilities\NativeMethodsHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,14 +74,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="app.config" />
     <None Include="app.manifest">
       <SubType>Designer</SubType>
@@ -90,6 +91,46 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Flags\belgium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Flags\bulgarian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Flags\english.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Flags\french.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Flags\german.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Flags\greek.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Flags\hungarian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Flags\italian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Flags\polish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Flags\romanian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Flags\russian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Flags\spanish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Flags\uknown.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

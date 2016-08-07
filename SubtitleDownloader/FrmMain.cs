@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Threading;
 using System.IO;
+using SubtitleDownloader.Utilities;
 
 namespace SubtitleDownloader
 {
@@ -79,12 +80,17 @@ namespace SubtitleDownloader
         {
             this.BeginInvoke((MethodInvoker)delegate
             {
+                int key = 0;
+                var imageList = new ImageList();
                 foreach (var subtitle in subtitles)
                 {
+                    imageList.Images.Add(Helper.GetResource(subtitle.Language.ToLower()));
                     var item = new ListViewItem(new[] { subtitle.Language, subtitle.Version, subtitle.Completed });
+                    item.ImageIndex = key++;
                     lstSubtitles.Items.Add(item);
                     item.Tag = subtitle.Download;
                 }
+                lstSubtitles.SmallImageList = imageList;
             });
         }
 
