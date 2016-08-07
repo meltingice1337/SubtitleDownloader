@@ -83,6 +83,16 @@ namespace SubtitleDownloader.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dutch {
+            get {
+                object obj = ResourceManager.GetObject("dutch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap english {
             get {
                 object obj = ResourceManager.GetObject("english", resourceCulture);
@@ -146,6 +156,16 @@ namespace SubtitleDownloader.Properties {
         internal static System.Drawing.Bitmap polish {
             get {
                 object obj = ResourceManager.GetObject("polish", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap portuguese {
+            get {
+                object obj = ResourceManager.GetObject("portuguese", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

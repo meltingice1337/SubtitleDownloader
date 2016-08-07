@@ -124,6 +124,9 @@
   <data name="bulgarian" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Flags\bulgarian.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dutch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Flags\dutch.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="english" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Flags\english.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -144,6 +147,12 @@
   </data>
   <data name="polish" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Flags\polish.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="portuguese" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Flags\portuguese.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="portuguese__brazilian_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Flags\portuguese (brazilian).png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="romanian" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Flags\romanian.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
