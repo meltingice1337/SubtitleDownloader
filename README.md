@@ -5,6 +5,13 @@ Features
 ---
 * Search tv subtitles on addic7ed.com
 * Add to contextual menu of video files
+* Show details about subtitles like:
+  * Language
+  * Flag
+  * Video Version
+  * Subtitle completition level
+* The window's title will become the title of the episode if found any
+
 
 Screenshot
 ---
