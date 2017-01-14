@@ -25,5 +25,11 @@ namespace SubtitleDownloader
             }
             return result;
         }
+
+        public static string GetEpisodeTitle(string pageContent)
+        {
+            var episodeTitle = Regex.Match(pageContent, @"(?<=""titulo"">)((.|\n)*?)(?=<small)").Value;
+            return episodeTitle.Trim();
+        }
     }
 }

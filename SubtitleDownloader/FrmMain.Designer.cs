@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblStatus = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtQuery = new System.Windows.Forms.TextBox();
             this.lblStatusValue = new System.Windows.Forms.Label();
             this.chkContextMenu = new System.Windows.Forms.CheckBox();
+            this.autoCloseTimer = new System.Windows.Forms.Timer(this.components);
             this.lstSubtitles = new SubtitleDownloader.ListViewEx();
             this.hLanguage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.hVersion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -86,6 +88,11 @@
             this.chkContextMenu.UseVisualStyleBackColor = true;
             this.chkContextMenu.CheckedChanged += new System.EventHandler(this.chkContextMenu_CheckedChanged);
             // 
+            // autoCloseTimer
+            // 
+            this.autoCloseTimer.Interval = 1000;
+            this.autoCloseTimer.Tick += new System.EventHandler(this.autoCloseTimer_Tick);
+            // 
             // lstSubtitles
             // 
             this.lstSubtitles.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -128,7 +135,7 @@
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 419);
+            this.ClientSize = new System.Drawing.Size(355, 418);
             this.Controls.Add(this.chkContextMenu);
             this.Controls.Add(this.lstSubtitles);
             this.Controls.Add(this.lblStatusValue);
@@ -162,6 +169,7 @@
         private System.Windows.Forms.ColumnHeader hVersion;
         private System.Windows.Forms.ColumnHeader hCompleted;
         private System.Windows.Forms.CheckBox chkContextMenu;
+        private System.Windows.Forms.Timer autoCloseTimer;
     }
 }
 

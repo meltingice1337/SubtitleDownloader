@@ -17,6 +17,7 @@ namespace SubtitleDownloader
         private bool Downloading = false;
         private string DownloadPath;
         private string FileName;
+        private int TickCount = 0;
 
         public FrmMain(string[] args)
         {
@@ -61,6 +62,8 @@ namespace SubtitleDownloader
                 if (pageContent != null)
                 {
                     var subtitles = Addic7edClass.Parse(pageContent);
+                    string episodeTitle = Addic7edClass.GetEpisodeTitle(pageContent);
+                    BeginInvoke((MethodInvoker)delegate { this.Text = Addic7edClass.GetEpisodeTitle(pageContent); });
                     InsertItems(subtitles);
                     if (subtitles.Count > 0)
                         SetStatus(subtitles.Count.ToString() + " subtitles found.");
@@ -104,6 +107,15 @@ namespace SubtitleDownloader
                 Downloading = true;
                 SetStatus("Downloading file...");
                 Web.Download(url, Path.Combine(DownloadPath, FileName + ".srt"));
+                this.BeginInvoke((MethodInvoker)delegate
+                {
+                    if (autoCloseTimer.Enabled)
+                    {
+                        TickCount = 0;
+                        autoCloseTimer.Start();
+                    }
+                    else autoCloseTimer.Start();
+                });
                 SetStatus("Done");
                 Downloading = false;
             })).Start();
@@ -166,6 +178,15 @@ namespace SubtitleDownloader
             DownloadPath = Path.GetDirectoryName(files[0]);
 
             Search(query);
+        }
+
+        private void autoCloseTimer_Tick(object sender, EventArgs e)
+        {
+            int autoCloseSeconds = 30;
+            if (TickCount == autoCloseSeconds)
+                Environment.Exit(0);
+            Text = "SubtitleDownloader - " + (autoCloseSeconds - TickCount) + " s until closing";
+            TickCount++;
         }
     }
 }
