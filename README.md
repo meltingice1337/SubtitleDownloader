@@ -8,7 +8,7 @@ Features
 
 Screenshot
 ---
-![Subtitle Downloader](http://i.imgur.com/CeWFrmA.png)
+![Subtitle Downloader](http://i.imgur.com/Wd7rkJK.png)
 
 
 Donations
