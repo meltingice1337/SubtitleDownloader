@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SubtitleDownloader</RootNamespace>
     <AssemblyName>SubtitleDownloader</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -63,6 +63,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Utilities\Helper.cs" />
+    <Compile Include="Utilities\LevenstheinDistance.cs" />
     <Compile Include="Utilities\NativeMethodsHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
