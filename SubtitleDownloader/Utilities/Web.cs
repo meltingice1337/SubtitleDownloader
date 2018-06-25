@@ -40,7 +40,7 @@ namespace SubtitleDownloader
         {
             try
             {
-                var match = Regex.Match(q, "(.*?)[Ss]?(\\d+)[xXeE]?(\\d+)(.*)");
+                var match = Regex.Match(q, "(.*?)[Ss]?(\\d+)[xXeE]+?(\\d+)(.*)");
                 ShowInfo fi = new ShowInfo(match.Groups[1].Value, match.Groups[2].Value, match.Groups[3].Value, match.Groups[4].Value);
                 var showId = GetShowId(fi);
                 if (showId == -1) return null;
